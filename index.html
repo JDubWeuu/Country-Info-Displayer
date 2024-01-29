@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Playing with Countries API</title>
+</head>
+<body>
+    <!-- add up to the class here later -->
+    <form action="#" class="user_input"> 
+        <h1>Country Information Displayer</h1>
+        <label for="country">Country name</label>
+        <input type="text" placeholder="United States" id="country">
+
+        <h2>Choose what you want to know about the country below.</h2>
+        <section>
+            <label for="currency">Currency </label>
+            <input type="checkbox" id="currency" name="picker" value="currency">
+        </section>
+        <section>
+            <label for="languages">Official Languages </label>
+            <input type="checkbox" id="languages" name="picker" value="languages">
+        </section>
+        <section>
+            <label for="population">Population </label>
+            <input type="checkbox" id="population" name="picker" value="population">
+        </section>
+        <section>
+            <label for="capital_city">Capital City </label>
+            <input type="checkbox" id="capital_city" name="picker" value="capital_city">
+        </section>
+        <section>
+            <label for="region">Region </label>
+            <input type="checkbox" id="region" name="picker" value="region">
+        </section>
+        
+        <button class="submit">Submit</button>
+    </form>
+    <div class="country_show up">
+        <img src="" alt="">
+        <h1 class="name">...country name...</h1>
+        <ul>
+            <!-- add the attributes you want in here -->
+        </ul>
+        <button class="back_button">Back</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
