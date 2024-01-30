@@ -4,6 +4,7 @@ const nameInput = document.querySelector("#country");
 const button = document.querySelector(".submit");
 const form = document.querySelector('.user_input');
 const screen = document.querySelector('.country_show');
+const secondInput = document.querySelector('.second_input')
 
 const backButton = document.querySelector('.back_button');
 backButton.addEventListener('click', () => {
@@ -19,6 +20,22 @@ backButton.addEventListener('click', () => {
     const ul = document.querySelector('ul');
     while (ul.firstChild) {
         ul.firstChild.remove();
+    }
+})
+
+nameInput.addEventListener('keydown', (e) => {;
+    if (e.key === "Enter" && nameInput.value !== '') {
+        e.preventDefault();
+        let secondPage = document.querySelector('.second_input');
+        checkValidCountry(nameInput.value)
+            .then((valid) => {
+                console.log("Valid input");
+                form.classList.toggle('up');
+                secondPage.classList.toggle('up');
+            })
+            .catch((error) => {
+                console.error(error);
+            })
     }
 })
 
@@ -62,7 +79,7 @@ button.addEventListener('click', (e) => {
 
                     }
                 }
-                form.classList.toggle('up');
+                secondInput.classList.toggle('up');
                 screen.classList.toggle('up');
             }
             else {
@@ -113,6 +130,21 @@ const region = (data, ul) => {
     li.innerText = `Region: ${data[0].region}`;
     if (ul) {
         ul.appendChild(li);
+    }
+}
+
+async function checkValidCountry(val) {
+    try {
+        let response = await fetch(FIRST_PART_URL + `${val.toLowerCase()}?fullText=true`);
+        if (response.ok) {
+            return true;
+        }
+        else {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+    }
+    catch (error) {
+        throw error;
     }
 }
 

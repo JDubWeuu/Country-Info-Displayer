@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
     <title>Playing with Countries API</title>
 </head>
 <body>
     <!-- add up to the class here later -->
-    <form action="#" class="user_input"> 
-        <h1>Country Information Displayer</h1>
-        <label for="country">Country name</label>
-        <input type="text" placeholder="United States" id="country">
+    <form action="#" class="user_input">
+        <section class="container">
+            <header class="nav">
+                <a href="#"><img src="globe.jpeg" alt="globe" class="cartoon_globe"></a>
+                <h1>Country Information Displayer</h1>
+            </header>
+            <div class="page_1">
+                <label for="country" class="label_country">Country name: </label>
+                <input type="text" placeholder="i.e. United States" id="country">
+            </div>
+        </section>
+    </form>
 
+    <form action="#" class="second_input up">
         <h2>Choose what you want to know about the country below.</h2>
         <section>
             <label for="currency">Currency </label>
@@ -38,7 +50,7 @@
         <button class="submit">Submit</button>
     </form>
     <div class="country_show up">
-        <img src="" alt="">
+        <img class="img" src="" alt="">
         <h1 class="name">...country name...</h1>
         <ul>
             <!-- add the attributes you want in here -->

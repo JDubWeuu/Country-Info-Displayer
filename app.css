@@ -1,3 +1,30 @@
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+section.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    text-align: center;
+}
+
+.nav .cartoon_globe {
+    margin-right: 10px;
+    width: 50px;
+}
+
+.cartoon_globe:hover {
+    cursor: pointer;
+}
+
 .up {
     display: none;
 }
@@ -8,4 +35,26 @@ section {
 
 .back_button {
     margin: 20px;
+}
+
+.img {
+    box-sizing: border-box;
+    transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+}
+
+.img:hover {
+    transform: scale(1.035);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.page_1 {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-60px);
+}
+
+.label_country {
+    margin: 10px;
 }
