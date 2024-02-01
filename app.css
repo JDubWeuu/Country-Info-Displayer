@@ -2,6 +2,11 @@ html, body {
     margin: 0;
     height: 100%;
 }
+
+h1 {
+    margin: 0;
+}
+
 body {
     font-family: 'Hind Siliguri', sans-serif;
     min-height: 100vh;
@@ -57,7 +62,7 @@ section.container {
 }
 
 .label_country {
-    margin: 10px;
+    margin: 0.5em;
 }
 
 footer {
@@ -86,4 +91,30 @@ a {
 a:hover {
     transform: scale(1.01);
     opacity: 0.6;
+}
+
+.second_input, .country_show {
+    margin: 1.5em;
+}
+
+button {
+    border-style: none;
+    border: 1px solid black;
+    border-radius: 1em;
+    margin-top: 1.2em;
+    background: transparent;
+    padding: 0.3em 0.5em;
+    transition: color 100ms ease-in-out, background-color 100ms ease-in-out;
+}
+
+button:hover {
+    color: white;
+    background-color: black;
+}
+
+.text-box {
+    border-style: none;
+    border-radius: 0.3em;
+    border: 1px solid black;
+    padding: 0.25em 0.5em;
 }
