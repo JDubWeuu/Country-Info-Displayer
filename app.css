@@ -1,5 +1,10 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
 body {
     font-family: 'Hind Siliguri', sans-serif;
+    min-height: 100vh;
 }
 
 section.container {
@@ -9,6 +14,7 @@ section.container {
 }
 
 .nav {
+    padding: 0.3em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,11 +34,6 @@ section.container {
 .up {
     display: none;
 }
-
-section {
-    margin: 10px;
-}
-
 .back_button {
     margin: 20px;
 }
@@ -57,4 +58,33 @@ section {
 
 .label_country {
     margin: 10px;
+}
+
+footer {
+    box-sizing: border-box;
+    padding-right: 0.9em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100px;
+    background-color: #E8FFF5;
+
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    display: inline-block;
+    transition: transform 200ms ease-in-out opacity 200ms ease-in-out;
+}
+
+a:hover {
+    transform: scale(1.01);
+    opacity: 0.6;
 }
