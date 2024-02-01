@@ -67,9 +67,8 @@ footer {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    height: 100px;
+    height: 90px;
     background-color: #E8FFF5;
-
 }
 
 p {
